@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Chris Miller
+N:Miller;Chris;;;
+ORG:Bee King's Honey
+TITLE:Owner
+EMAIL;TYPE=INTERNET;TYPE=WORK;TYPE=pref:chris@beekings.com
+TEL;TYPE=CELL;TYPE=VOICE;TYPE=pref:(253) 261-4864
+ADR;TYPE=WORK;TYPE=pref:;;570 W Statehighway 243;Canton;TX;75103;United States
+URL;TYPE=pref:https://beekings.com
+X-SOCIALPROFILE;type=Twitter:https://x.com/xtophermiller
+X-SOCIALPROFILE;type=Instagram:https://instagram.com/beekingsco
+X-SOCIALPROFILE;type=TikTok:https://tiktok.com/@beekingsco
+X-SOCIALPROFILE;type=facebook:https://facebook.com/beekingsco
+END:VCARD

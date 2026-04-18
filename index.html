@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chris Miller | Bee King's Honey</title>
+  <meta name="description" content="Contact page for Chris Miller at Bee King's Honey.">
+  <style>
+    :root {
+      --bg1: #1e1305;
+      --bg2: #5c3908;
+      --gold: #f1c75b;
+      --card: rgba(255,255,255,.11);
+      --line: rgba(255,255,255,.16);
+      --text: #fff9ee;
+      --muted: #f3e3c3;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--text); background:linear-gradient(180deg,var(--bg1),var(--bg2)); min-height:100vh; }
+    .wrap { max-width:720px; margin:0 auto; padding:24px 18px 40px; }
+    .hero,.section { background:var(--card); border:1px solid var(--line); border-radius:28px; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); box-shadow:0 18px 60px rgba(0,0,0,.22); }
+    .hero { padding:30px 22px 28px; text-align:center; }
+    .logo { max-width:280px; width:100%; height:auto; filter: drop-shadow(0 10px 24px rgba(0,0,0,.25)); }
+    h1 { margin:18px 0 4px; font-size:34px; }
+    .role { margin:0; color:var(--muted); font-size:18px; }
+    .company { margin:8px 0 0; color:var(--gold); font-weight:700; }
+    .actions { display:grid; gap:12px; margin-top:22px; }
+    .btn { display:block; text-decoration:none; text-align:center; padding:16px 18px; border-radius:16px; font-weight:700; font-size:17px; }
+    .btn-primary { background:var(--gold); color:#372304; }
+    .btn-secondary { background:rgba(255,255,255,.1); color:var(--text); border:1px solid var(--line); }
+    .section { margin-top:18px; padding:22px 18px; }
+    .section h2 { margin:0 0 14px; font-size:20px; }
+    .item { padding:14px 0; border-top:1px solid var(--line); }
+    .item:first-of-type { border-top:0; padding-top:0; }
+    .label { color:var(--muted); font-size:13px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:4px; }
+    .value, .value a { color:var(--text); text-decoration:none; font-size:18px; word-break:break-word; }
+    .socials { display:grid; gap:10px; }
+    .small { color:var(--muted); font-size:14px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <img class="logo" src="./beekings_logo.png" alt="Bee King's Honey">
+      <h1>Chris Miller</h1>
+      <p class="role">Owner</p>
+      <p class="company">Bee King's Honey</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="./chris_miller_beekings.vcf" download="Chris-Miller-BeeKings.vcf">Add Contact</a>
+        <a class="btn btn-secondary" href="tel:+12532614864">Call Chris</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <div class="item"><div class="label">Mobile</div><div class="value"><a href="tel:+12532614864">(253) 261-4864</a></div></div>
+      <div class="item"><div class="label">Email</div><div class="value"><a href="mailto:chris@beekings.com">chris@beekings.com</a></div></div>
+      <div class="item"><div class="label">Website</div><div class="value"><a href="https://beekings.com">beekings.com</a></div></div>
+      <div class="item"><div class="label">Address</div><div class="value">570 W Statehighway 243<br>Canton, TX 75103</div></div>
+    </div>
+
+    <div class="section">
+      <h2>Social</h2>
+      <div class="socials">
+        <a class="btn btn-secondary" href="https://x.com/xtophermiller">Twitter / X @xtophermiller</a>
+        <a class="btn btn-secondary" href="https://instagram.com/beekingsco">Instagram @beekingsco</a>
+        <a class="btn btn-secondary" href="https://tiktok.com/@beekingsco">TikTok @beekingsco</a>
+        <a class="btn btn-secondary" href="https://facebook.com/beekingsco">Facebook @beekingsco</a>
+      </div>
+      <p class="small">Open this page, then tap Add Contact to save Chris to your phone.</p>
+    </div>
+  </div>
+</body>
+</html>
