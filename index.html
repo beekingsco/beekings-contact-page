@@ -23,7 +23,7 @@
       background:linear-gradient(180deg,var(--bg2),var(--bg1));
       min-height:100vh;
     }
-    .wrap { max-width: 520px; margin: 0 auto; padding: 12px; }
+    .wrap { max-width: 520px; margin: 0 auto; padding: 8px; }
     .card {
       background: var(--card);
       border: 1px solid var(--line);
@@ -33,33 +33,33 @@
       -webkit-backdrop-filter: blur(14px);
       box-shadow: 0 18px 60px rgba(0,0,0,.28);
     }
-    .photo { width:100%; aspect-ratio:1/0.72; object-fit:cover; display:block; }
-    .body { padding: 16px 16px 18px; }
-    .logo { display:block; margin: 0 auto 10px; max-width: 180px; width: 100%; height: auto; }
-    h1 { margin: 0; font-size: 24px; text-align:center; }
-    .role { margin: 2px 0 0; text-align:center; color: var(--muted); font-size: 15px; }
-    .company { margin: 6px 0 14px; text-align:center; color: var(--gold); font-weight: 800; font-size: 15px; }
+    .photo { width:100%; aspect-ratio:1/0.62; object-fit:cover; display:block; }
+    .body { padding: 12px 12px 14px; }
+    .logo { display:block; margin: 0 auto 10px; max-width: 150px; width: 100%; height: auto; }
+    h1 { margin: 0; font-size: 22px; text-align:center; }
+    .role { margin: 2px 0 0; text-align:center; color: var(--muted); font-size: 14px; }
+    .company { margin: 4px 0 10px; text-align:center; color: var(--gold); font-weight: 800; font-size: 14px; }
     .actions { display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .btn {
-      border: 0; text-decoration:none; text-align:center; padding: 14px 12px; border-radius: 16px;
-      font-weight: 800; font-size: 16px; display:flex; align-items:center; justify-content:center; gap:8px;
+      border: 0; text-decoration:none; text-align:center; padding: 12px 10px; border-radius: 16px;
+      font-weight: 800; font-size: 15px; display:flex; align-items:center; justify-content:center; gap:8px;
     }
     .primary { background:linear-gradient(135deg,var(--gold),#f7e2a0); color:#322400; }
     .secondary { background: rgba(255,255,255,.1); color: var(--text); border: 1px solid var(--line); }
     .grid { display:grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
     .pill {
-      background: rgba(255,255,255,.08); border: 1px solid var(--line); border-radius: 16px; padding: 12px;
-      text-decoration:none; color:var(--text); min-height:72px; display:flex; flex-direction:column; justify-content:center;
+      background: rgba(255,255,255,.08); border: 1px solid var(--line); border-radius: 16px; padding: 8px;
+      text-decoration:none; color:var(--text); min-height:60px; display:flex; flex-direction:column; justify-content:center;
     }
     .pill b { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
-    .pill span { font-size: 15px; line-height:1.25; }
+    .pill span { font-size: 14px; line-height:1.25; }
     .icons { display:grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-top:10px; }
     .iconBtn {
       background: rgba(255,255,255,.08); border: 1px solid var(--line); border-radius: 16px; color:var(--text);
-      text-decoration:none; text-align:center; padding: 10px 4px; font-size: 12px; font-weight:700;
+      text-decoration:none; text-align:center; padding: 8px 2px; font-size: 12px; font-weight:700;
     }
     .icon {
-      width: 24px; height:24px; margin: 0 auto 6px; display:block; stroke: currentColor; fill: none; stroke-width: 1.8;
+      width: 20px; height:20px; margin: 0 auto 6px; display:block; stroke: currentColor; fill: none; stroke-width: 1.8;
       stroke-linecap: round; stroke-linejoin: round;
     }
     .modal-backdrop { position:fixed; inset:0; background:rgba(8,10,20,.72); display:none; align-items:center; justify-content:center; padding:20px; z-index:50; }
@@ -94,9 +94,8 @@
         <div class="grid">
           <a class="pill" href="tel:+12532614864"><b>Phone</b><span>(253) 261-4864</span></a>
           <a class="pill" href="mailto:chris@beekings.com"><b>Email</b><span>chris@beekings.com</span></a>
-          <a class="pill" href="https://beekings.com"><b>Website</b><span>beekings.com</span></a>
-          <div class="pill"><b>Address</b><span>570 W Statehighway 243<br>Canton, TX</span></div>
         </div>
+        <a class="pill" style="margin-top:10px; min-height:unset;" href="https://beekings.com"><b>Website and address</b><span>beekings.com, 570 W Statehighway 243, Canton, TX</span></a>
 
         <div class="icons">
           <a class="iconBtn" href="tel:+12532614864"><svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.78.68 2.62a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.46-1.25a2 2 0 0 1 2.11-.45c.84.33 1.72.56 2.62.68A2 2 0 0 1 22 16.92z"></path></svg>Call</a>
