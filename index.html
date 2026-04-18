@@ -7,90 +7,104 @@
   <meta name="description" content="Contact page for Chris Miller at Bee King's Honey.">
   <style>
     :root {
-      --bg1: #0d1324;
-      --bg2: #25184a;
+      --bg1: #1a1035;
+      --bg2: #4a3387;
       --gold: #efc75e;
-      --violet: #6d53d9;
-      --card: rgba(255,255,255,.10);
-      --line: rgba(255,255,255,.14);
       --text: #fff9ef;
       --muted: #ddd7f3;
+      --card: rgba(255,255,255,.1);
+      --line: rgba(255,255,255,.12);
     }
     * { box-sizing: border-box; }
     body {
-      margin:0; color:var(--text);
+      margin:0;
+      color:var(--text);
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background: radial-gradient(circle at top, #3b2472 0%, var(--bg2) 35%, var(--bg1) 100%);
+      background:linear-gradient(180deg,var(--bg2),var(--bg1));
       min-height:100vh;
     }
-    .wrap { max-width:760px; margin:0 auto; padding:20px 18px 40px; }
-    .hero, .section {
-      background:var(--card); border:1px solid var(--line); border-radius:30px;
-      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 24px 70px rgba(0,0,0,.28);
-      overflow:hidden;
+    .wrap { max-width: 520px; margin: 0 auto; padding: 12px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 18px 60px rgba(0,0,0,.28);
     }
-    .hero-photo { width:100%; aspect-ratio: 4 / 4.3; object-fit:cover; display:block; }
-    .hero-inner { padding:22px; text-align:center; }
-    .logo { max-width:220px; width:100%; height:auto; filter: drop-shadow(0 10px 24px rgba(0,0,0,.2)); }
-    h1 { margin:16px 0 4px; font-size:34px; }
-    .role { margin:0; color:var(--muted); font-size:18px; }
-    .company { margin:10px 0 0; color:var(--gold); font-weight:800; letter-spacing:.02em; }
-    .actions { display:grid; gap:12px; margin-top:22px; }
-    .btn { display:block; text-decoration:none; text-align:center; padding:16px 18px; border-radius:18px; font-weight:800; font-size:17px; }
-    .btn-primary { background:linear-gradient(135deg,var(--gold),#f6df94); color:#2b2205; }
-    .btn-secondary { background:rgba(109,83,217,.22); color:var(--text); border:1px solid rgba(255,255,255,.12); }
-    .section { margin-top:18px; padding:22px 18px; }
-    .section h2 { margin:0 0 14px; font-size:20px; }
-    .item { padding:14px 0; border-top:1px solid var(--line); }
-    .item:first-of-type { border-top:0; padding-top:0; }
-    .label { color:var(--muted); font-size:13px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:4px; }
-    .value, .value a { color:var(--text); text-decoration:none; font-size:18px; word-break:break-word; }
-    .socials { display:grid; gap:10px; }
-    .small { color:var(--muted); font-size:14px; }
-  
-    .modal-backdrop { position:fixed; inset:0; background:rgba(8,10,20,.7); display:none; align-items:center; justify-content:center; padding:20px; z-index:50; }
-    .modal { max-width:520px; width:100%; background:#17142a; border:1px solid rgba(255,255,255,.14); border-radius:24px; padding:22px; box-shadow:0 24px 70px rgba(0,0,0,.35); }
-    .modal h3 { margin:0 0 10px; }
-    .modal p, .modal li { color:var(--muted); line-height:1.45; }
-    .modal ol { padding-left:20px; }
-    .modal-actions { display:grid; gap:10px; margin-top:18px; }
-</style>
+    .photo { width:100%; aspect-ratio:1/1; object-fit:cover; display:block; }
+    .body { padding: 16px 16px 18px; }
+    .logo { display:block; margin: 0 auto 10px; max-width: 180px; width: 100%; height: auto; }
+    h1 { margin: 0; font-size: 24px; text-align:center; }
+    .role { margin: 2px 0 0; text-align:center; color: var(--muted); font-size: 15px; }
+    .company { margin: 6px 0 14px; text-align:center; color: var(--gold); font-weight: 800; font-size: 15px; }
+    .actions { display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .btn {
+      border: 0; text-decoration:none; text-align:center; padding: 14px 12px; border-radius: 16px;
+      font-weight: 800; font-size: 16px; display:flex; align-items:center; justify-content:center; gap:8px;
+    }
+    .primary { background:linear-gradient(135deg,var(--gold),#f7e2a0); color:#322400; }
+    .secondary { background: rgba(255,255,255,.1); color: var(--text); border: 1px solid var(--line); }
+    .grid { display:grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+    .pill {
+      background: rgba(255,255,255,.08); border: 1px solid var(--line); border-radius: 16px; padding: 12px;
+      text-decoration:none; color:var(--text); min-height:72px; display:flex; flex-direction:column; justify-content:center;
+    }
+    .pill b { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+    .pill span { font-size: 15px; line-height:1.25; }
+    .icons { display:grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-top:10px; }
+    .iconBtn {
+      background: rgba(255,255,255,.08); border: 1px solid var(--line); border-radius: 16px; color:var(--text);
+      text-decoration:none; text-align:center; padding: 10px 4px; font-size: 12px; font-weight:700;
+    }
+    .icon {
+      width: 24px; height:24px; margin: 0 auto 6px; display:block; stroke: currentColor; fill: none; stroke-width: 1.8;
+      stroke-linecap: round; stroke-linejoin: round;
+    }
+    .modal-backdrop { position:fixed; inset:0; background:rgba(8,10,20,.72); display:none; align-items:center; justify-content:center; padding:20px; z-index:50; }
+    .modal { max-width:460px; width:100%; background:#17142a; border:1px solid rgba(255,255,255,.14); border-radius:24px; padding:20px; }
+    .modal h3 { margin:0 0 8px; }
+    .modal p, .modal li { color:var(--muted); line-height:1.4; }
+    .modal ol { padding-left:20px; margin:10px 0 0; }
+    .modal-actions { display:grid; gap:10px; margin-top:16px; }
+  </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="hero">
-      <img class="hero-photo" src="./chris.jpg" alt="Chris Miller">
-      <div class="hero-inner">
+    <div class="card">
+      <img class="photo" src="./chris.jpg" alt="Chris Miller">
+      <div class="body">
         <img class="logo" src="./beekings_logo.png" alt="Bee King's Honey">
         <h1>Chris Miller</h1>
-        <p class="role">Owner</p>
-        <p class="company">Bee King's Honey</p>
+        <div class="role">Owner</div>
+        <div class="company">Bee King's Honey</div>
+
         <div class="actions">
-          <a class="btn btn-primary" href="./chris_miller_beekings.vcf" download="Chris-Miller-BeeKings.vcf">Add Contact</a>
-          <a class="btn btn-secondary" href="tel:+12532614864">Call Chris</a>
-          <button class="btn btn-secondary" type="button" onclick="openTextChris()">Text Chris</button>
+          <a class="btn primary" href="./chris_miller_beekings.vcf" download>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>
+            Add Contact
+          </a>
+          <button class="btn secondary" type="button" onclick="openTextChris()">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            Text Chris
+          </button>
+        </div>
+
+        <div class="grid">
+          <a class="pill" href="tel:+12532614864"><b>Phone</b><span>(253) 261-4864</span></a>
+          <a class="pill" href="mailto:chris@beekings.com"><b>Email</b><span>chris@beekings.com</span></a>
+          <a class="pill" href="https://beekings.com"><b>Website</b><span>beekings.com</span></a>
+          <div class="pill"><b>Address</b><span>570 W Statehighway 243<br>Canton, TX</span></div>
+        </div>
+
+        <div class="icons">
+          <a class="iconBtn" href="tel:+12532614864"><svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.78.68 2.62a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.46-1.25a2 2 0 0 1 2.11-.45c.84.33 1.72.56 2.62.68A2 2 0 0 1 22 16.92z"></path></svg>Call</a>
+          <a class="iconBtn" href="https://x.com/xtophermiller"><svg class="icon" viewBox="0 0 24 24"><path d="M4 4l16 16"></path><path d="M20 4 4 20"></path></svg>X</a>
+          <a class="iconBtn" href="https://instagram.com/beekingsco"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".5"></circle></svg>IG</a>
+          <a class="iconBtn" href="https://tiktok.com/@beekingsco"><svg class="icon" viewBox="0 0 24 24"><path d="M14 4v9.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 4c1 2 2.5 3 5 3"></path></svg>TikTok</a>
         </div>
       </div>
-    </div>
-
-    <div class="section">
-      <h2>Contact</h2>
-      <div class="item"><div class="label">Mobile</div><div class="value"><a href="tel:+12532614864">(253) 261-4864</a></div></div>
-      <div class="item"><div class="label">Email</div><div class="value"><a href="mailto:chris@beekings.com">chris@beekings.com</a></div></div>
-      <div class="item"><div class="label">Website</div><div class="value"><a href="https://beekings.com">beekings.com</a></div></div>
-      <div class="item"><div class="label">Address</div><div class="value">570 W Statehighway 243<br>Canton, TX 75103</div></div>
-    </div>
-
-    <div class="section">
-      <h2>Social</h2>
-      <div class="socials">
-        <a class="btn btn-secondary" href="https://x.com/xtophermiller">Twitter / X @xtophermiller</a>
-        <a class="btn btn-secondary" href="https://instagram.com/beekingsco">Instagram @beekingsco</a>
-        <a class="btn btn-secondary" href="https://tiktok.com/@beekingsco">TikTok @beekingsco</a>
-        <a class="btn btn-secondary" href="https://facebook.com/beekingsco">Facebook @beekingsco</a>
-      </div>
-      <p class="small">RoBee-inspired colors, BeeKings branding, and a one-tap contact download.</p>
     </div>
   </div>
 
@@ -105,11 +119,12 @@
         <li>Send it to Chris</li>
       </ol>
       <div class="modal-actions">
-        <a class="btn btn-primary" id="textChrisLink" href="#">Open Text Message</a>
-        <button class="btn btn-secondary" type="button" onclick="closeTextModal()">Not now</button>
+        <a class="btn primary" id="textChrisLink" href="#">Open Text Message</a>
+        <button class="btn secondary" type="button" onclick="closeTextModal()">Not now</button>
       </div>
     </div>
   </div>
+
   <script>
     function openTextChris() {
       const message = encodeURIComponent('Hey Chris, we met at Yellow Rose. My name is ');
