@@ -48,7 +48,14 @@
     .value, .value a { color:var(--text); text-decoration:none; font-size:18px; word-break:break-word; }
     .socials { display:grid; gap:10px; }
     .small { color:var(--muted); font-size:14px; }
-  </style>
+  
+    .modal-backdrop { position:fixed; inset:0; background:rgba(8,10,20,.7); display:none; align-items:center; justify-content:center; padding:20px; z-index:50; }
+    .modal { max-width:520px; width:100%; background:#17142a; border:1px solid rgba(255,255,255,.14); border-radius:24px; padding:22px; box-shadow:0 24px 70px rgba(0,0,0,.35); }
+    .modal h3 { margin:0 0 10px; }
+    .modal p, .modal li { color:var(--muted); line-height:1.45; }
+    .modal ol { padding-left:20px; }
+    .modal-actions { display:grid; gap:10px; margin-top:18px; }
+</style>
 </head>
 <body>
   <div class="wrap">
@@ -62,6 +69,7 @@
         <div class="actions">
           <a class="btn btn-primary" href="./chris_miller_beekings.vcf" download="Chris-Miller-BeeKings.vcf">Add Contact</a>
           <a class="btn btn-secondary" href="tel:+12532614864">Call Chris</a>
+          <button class="btn btn-secondary" type="button" onclick="openTextChris()">Text Chris</button>
         </div>
       </div>
     </div>
@@ -85,5 +93,32 @@
       <p class="small">RoBee-inspired colors, BeeKings branding, and a one-tap contact download.</p>
     </div>
   </div>
+
+  <div class="modal-backdrop" id="textModal" onclick="if(event.target===this) closeTextModal()">
+    <div class="modal">
+      <h3>How to send your contact card</h3>
+      <p>We’ll open a text to Chris with a starter message. Then:</p>
+      <ol>
+        <li>Tap the <strong>+</strong> button in Messages</li>
+        <li>Choose <strong>Contact</strong></li>
+        <li>Select <strong>your own contact card</strong></li>
+        <li>Send it to Chris</li>
+      </ol>
+      <div class="modal-actions">
+        <a class="btn btn-primary" id="textChrisLink" href="#">Open Text Message</a>
+        <button class="btn btn-secondary" type="button" onclick="closeTextModal()">Not now</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function openTextChris() {
+      const message = encodeURIComponent('Hey Chris, we met at Yellow Rose. My name is ');
+      document.getElementById('textChrisLink').href = `sms:+12532614864&body=${message}`;
+      document.getElementById('textModal').style.display = 'flex';
+    }
+    function closeTextModal() {
+      document.getElementById('textModal').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
